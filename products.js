@@ -27,6 +27,10 @@ exports.handler = (event, context, callback) => {
             callback(null, {body:"This is a DELETE operation on product ID " + id});
             break;
 
+        case "OTHER":
+            callback(null, {body:"This is the other operation"});
+            break;
+
         default:
             // Send HTTP 501: Not Implemented
             console.log("Error: unsupported HTTP method (" + event.httpMethod + ")");
